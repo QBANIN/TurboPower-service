@@ -5,12 +5,13 @@ android {
     buildToolsVersion "25.0.2"
 
     defaultConfig {
-        applicationId "com.bhb27.turbotoast"
-        minSdkVersion 13
+        applicationId "com.android.providers.charger"
+        minSdkVersion 19
         targetSdkVersion 25
-        versionCode 32
-        versionName "1.1.0"
+        versionCode 1
+        versionName "1"
     }
+
     buildTypes {
         release {
             minifyEnabled true
@@ -18,14 +19,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
     lintOptions {
         abortOnError false
-	disable 'UnsafeNativeCodeLocation', //UnsafeNativeCodeLocation: Native code outside library directory libsupol and supolicy
-		'GoogleAppIndexingWarning', //GoogleAppIndexingWarning: Missing support for Firebase App Indexing
-		'IconMissingDensityFolder' //IconMissingDensityFolder: Missing density folder
+        disable 'UnsafeNativeCodeLocation', // UnsafeNativeCodeLocation: Native code outside library directory libsupol and supolicy
+                'GoogleAppIndexingWarning', // GoogleAppIndexingWarning: Missing support for Firebase App Indexing
+                'IconMissingDensityFolder' // IconMissingDensityFolder: Missing density folder
     }
-    productFlavors {
-    }
+
+    productFlavors { }
+
     gradle.projectsEvaluated {
         tasks.withType(JavaCompile) {
             options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
@@ -33,5 +36,4 @@ android {
     }
 }
 
-dependencies {
-}
+dependencies { }

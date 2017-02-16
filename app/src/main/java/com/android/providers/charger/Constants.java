@@ -17,22 +17,19 @@
  * along with Kernel Adiutor.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package com.bhb27.turbotoast;
+
+package com.android.providers.charger;
 
 public interface Constants {
+	String TAG = "TurboPower";
+	String PREF_NAME = "prefs";
 
-    String TAG = "Turbotoast";
-    String PREF_NAME = "pref";
+	// Battery values works for quark and maybe other Moto devices
+	String BATTERY_PARAMETERS = "/sys/class/power_supply/battery";
 
-    // Battery values works for quark and maybe other Moto devices
-    String BATTERY_PARAMETERS = "/sys/class/power_supply/battery";
-    // Battery charging mode or rate type
-    String BATTERY_CHARGING_TYPE    = BATTERY_PARAMETERS + "/charge_rate";
-    // Battery %
-    String BATTERY_CAPACITY         = BATTERY_PARAMETERS + "/capacity";
+	// Battery charging mode or rate type
+	String BATTERY_CHARGING_TYPE = BATTERY_PARAMETERS + "/charge_rate";
 
-    //links
-    String email_link = "mailto:fglfgl27@gmail.com";
-    String xda_link   = "http://forum.xda-developers.com/moto-maxx/themes-apps/app-turbo-toast-t3427981";
-    String git_link   = "https://github.com/bhb27/turbotoast";
+	// Battery %
+	String BATTERY_CAPACITY = BATTERY_PARAMETERS + "/capacity";
 }
